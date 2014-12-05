@@ -1,0 +1,15 @@
+A few points from our meeting on 04/12/2014:
+
+First, do we have the following data:
+(a) the ‘clean’ excel spreadsheet containing the data (Jacek?); Or something similar; This is just to remind ourselves what are the column headings; Also we need a small table giving the overall statistics: number of interactions, number of pathogens, hosts, etc; Jacek can you generate this?
+(b) the ontology networks (the ones we developed in Protege); (Larisa?) - we could include part of these in the manuscript or put them as supplementary information.
+(c) We may need another meeting (or TC or email discussion) with Jacek and Noureddin so that we can make sure the ‘pre-defined’ queries work.
+
+Approx structure of manuscript: (what do you think? please modify/ add to this)
+
+1. Introduction: Biological motivation (importantce of understanding pathogen host interactions), urgency - rapid increase in description of pathogen-host interactions in the literature, need to be able to leverage the considerable manual effort put into the manual curation of the data, and to maximise the information that can be obtained from this highly curated dataset. Why we use semantic web technologies.
+2. (Intro) We need to be precise about the un-met need PHIbase RDF is filling - namely make clearer the semantics of the data. Enable data integration and also allowing the user to form complex queries by linking to other data sources; (Briefly mention other resources: Plant ontology is anatomy focussed?,PAMGO is section of bp aspect of GO, pathogen-interaction gateway resource? … )
+3. (Intro) We also need to state the outputs, namely (a) a pathogen host ontology and (b) a prototype resource. The resource will be shown to biologists and feedback obtained (Martin).
+4. Methodology - how the ontology was constructed; how the prototype resource was built (maybe include the data cleaning steps, etc as well?)
+5. Results: Discussion on how the ontology clarifies the semantics (in previous versions of PHIbase some relationships not defined or not clear); also describe a few of the pre-defined queries and show an example of a complex query written in spraql; (show how it is an enabling tool)
+6. Discussion 

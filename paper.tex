@@ -1,0 +1,51 @@
+\newcount\Comments  
+\Comments=1   
+\documentclass[a4paper,12pt, english]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+\usepackage{babel}
+%\usepackage{amsmath}
+
+\usepackage{color}
+
+
+\newcommand{\kibitz}[2]{\ifnum\Comments=1\textcolor{#1}{#2}\fi}
+% add yourself here:
+\newcommand{\ls}[1]{\kibitz{red}      {[Larisa: #1]}}
+\newcommand{\ms}[1]  {\kibitz{blue}   {[Mansoor: #1]}}
+\newcommand{\ns}[1]{\kibitz{orange}     {[Noureddin: #1]}}
+\newcommand{\jg}[1]{\kibitz{green}     {[Jacek: #1]}}
+\newcommand{\al}[1]{\kibitz{cyan}     {[Artym: #1]}}
+
+
+%\usepackage{listings}
+%\usepackage{url}
+%\usepackage{graphicx}
+
+%\usepackage{verbatim}
+
+%\usepackage{caption}
+%\usepackage{datetime}
+
+%\onehalfspacing
+
+\begin{document}
+
+\title{Paper for Phibase Ontology}
+\date{01 Feb 2015}
+\author{Author List}
+\maketitle
+
+\large
+\section{Noureddin (\today)}
+\begin{itemize}
+	\item Add more text
+	\item I have added these commands so we can write our own comments
+	\item Example: \ls{use this when you comment on someone else's section}
+	\item just use \ls{text} , \ms{text}, \jg{text} or \al{text} according to your initials
+	
+\end{itemize}  
+
+
+		
+\end{document}
