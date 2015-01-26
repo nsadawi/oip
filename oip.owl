@@ -176,6 +176,9 @@ Dr Noureddin Sadawi</Literal>
         <ObjectProperty IRI="encodes"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="has_disease"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="has_experiment_factor"/>
     </Declaration>
     <Declaration>
@@ -254,9 +257,6 @@ Dr Noureddin Sadawi</Literal>
         <ObjectProperty IRI="role_of"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="has_disease_name"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="has_name"/>
     </Declaration>
     <Declaration>
@@ -283,13 +283,6 @@ Dr Noureddin Sadawi</Literal>
     <Declaration>
         <AnnotationProperty IRI="title"/>
     </Declaration>
-    <EquivalentClasses>
-        <Class IRI="disease"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="has_disease_name"/>
-            <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="host"/>
         <ObjectSomeValuesFrom>
@@ -482,6 +475,13 @@ Dr Noureddin Sadawi</Literal>
     <SubClassOf>
         <Class IRI="interaction"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="has_disease"/>
+            <Class IRI="disease"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="interaction"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="has_gene"/>
             <Class IRI="gene"/>
         </ObjectSomeValuesFrom>
@@ -541,13 +541,6 @@ Dr Noureddin Sadawi</Literal>
             <ObjectProperty IRI="has_representation"/>
             <Class IRI="interaction_ID"/>
         </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="interaction"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="has_disease_name"/>
-            <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
-        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="interaction_ID"/>
@@ -707,6 +700,10 @@ Dr Noureddin Sadawi</Literal>
         <ObjectProperty IRI="phi_base_property"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="has_disease"/>
+        <ObjectProperty IRI="phi_base_property"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="has_experiment_factor"/>
         <ObjectProperty IRI="phi_base_property"/>
     </SubObjectPropertyOf>
@@ -863,17 +860,9 @@ Dr Noureddin Sadawi</Literal>
         <Class IRI="protein"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
-        <DataProperty IRI="has_disease_name"/>
-        <DataProperty IRI="has_name"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="has_strain_name"/>
         <DataProperty IRI="has_name"/>
     </SubDataPropertyOf>
-    <DataPropertyDomain>
-        <DataProperty IRI="has_disease_name"/>
-        <Class IRI="interaction"/>
-    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="has_strain_name"/>
         <Class IRI="organism"/>
@@ -1139,8 +1128,8 @@ A disease is a disposition that describes states of disease associated with a pa
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>has_disease_name</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has disease name</Literal>
+        <IRI>has_disease</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has disease</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
