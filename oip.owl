@@ -530,10 +530,10 @@ Dr Noureddin Sadawi</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="interaction"/>
-        <ObjectExactCardinality cardinality="1">
+        <ObjectMinCardinality cardinality="1">
             <ObjectProperty IRI="has_pathogen"/>
             <Class IRI="organism"/>
-        </ObjectExactCardinality>
+        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="interaction"/>
