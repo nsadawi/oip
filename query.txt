@@ -1,0 +1,23 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX pho: <http://oip.rothamsted.ac.uk/ontology/>
+PREFIX pcore: <http://purl.uniprot.org/core/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix un: <http://purl.uniprot.org/core/>
+
+SELECT ?uniprot ?seeAlso ?comment WHERE { 
+?interaction a pho:interaction .
+?interaction pho:has_output ?phenotype .
+?interaction pho:has_host <http://oip.rothmasted.ac.uk/resources/organism/4530> .
+<http://oip.rothmasted.ac.uk/resources/organism/4530> rdfs:label ?hlabel .
+?phenotype rdfs:label ?phlabel .
+?interaction pho:has_protein ?protein .
+filter regex(?phlabel, "loss*") .
+?protein owl:sameAs ?uniprot .
+service <http://beta.sparql.uniprot.org/sparql/> {
+?uniprot rdfs:seeAlso ?seeAlso .
+filter regex(str(?seeAlso), "/Pfam", "i") .
+?seeAlso rdfs:comment ?comment
+}
+}
