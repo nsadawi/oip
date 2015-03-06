@@ -48,9 +48,6 @@ Dr Noureddin Sadawi</Literal>
         <Literal datatypeIRI="&rdf;PlainLiteral">0.0.3</Literal>
     </Annotation>
     <Declaration>
-        <Class IRI="full_citation"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="annotation"/>
     </Declaration>
     <Declaration>
@@ -79,6 +76,9 @@ Dr Noureddin Sadawi</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="experiment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="full_citation"/>
     </Declaration>
     <Declaration>
         <Class IRI="function"/>
@@ -165,18 +165,6 @@ Dr Noureddin Sadawi</Literal>
         <Class IRI="strain"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="has_citation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="has_strain"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="is_about"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="has_origin"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="curated_by"/>
     </Declaration>
     <Declaration>
@@ -204,6 +192,9 @@ Dr Noureddin Sadawi</Literal>
         <ObjectProperty IRI="has_location"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="has_origin"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="has_output"/>
     </Declaration>
     <Declaration>
@@ -219,10 +210,16 @@ Dr Noureddin Sadawi</Literal>
         <ObjectProperty IRI="has_role"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="has_strain"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hast_protein"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="input_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="is_about"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="is_experiment_factor"/>
@@ -255,6 +252,9 @@ Dr Noureddin Sadawi</Literal>
         <ObjectProperty IRI="role_of"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="has_full_citation"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="has_identifier"/>
     </Declaration>
     <Declaration>
@@ -268,9 +268,6 @@ Dr Noureddin Sadawi</Literal>
     </Declaration>
     <Declaration>
         <DataProperty IRI="has_value"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://oip.rothamsted.ac.uk/resources/has_citation"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="contributor"/>
@@ -304,17 +301,6 @@ Dr Noureddin Sadawi</Literal>
             <Class IRI="organism"/>
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
-    <SubClassOf>
-        <Class IRI="full_citation"/>
-        <Class IRI="information_entity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="full_citation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="is_about"/>
-            <Class abbreviatedIRI="owl:Thing"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
     <SubClassOf>
         <Class IRI="annotation"/>
         <Class IRI="information_entity"/>
@@ -384,6 +370,17 @@ Dr Noureddin Sadawi</Literal>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="has_experiment_factor"/>
             <Class IRI="quality"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="full_citation"/>
+        <Class IRI="information_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="full_citation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="is_about"/>
+            <Class abbreviatedIRI="owl:Thing"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -551,13 +548,6 @@ Dr Noureddin Sadawi</Literal>
     <SubClassOf>
         <Class IRI="organism"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="has_strain"/>
-            <Class IRI="strain"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="organism"/>
-        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="curated_by"/>
             <Class IRI="species_expert"/>
         </ObjectSomeValuesFrom>
@@ -567,6 +557,13 @@ Dr Noureddin Sadawi</Literal>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="has_quality"/>
             <Class IRI="phenotype"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="organism"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="has_strain"/>
+            <Class IRI="strain"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -663,22 +660,6 @@ Dr Noureddin Sadawi</Literal>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="has_citation"/>
-        <ObjectProperty IRI="phi_base_property"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="has_strain"/>
-        <ObjectProperty IRI="has_participant"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="is_about"/>
-        <ObjectProperty IRI="phi_base_property"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="has_origin"/>
-        <ObjectProperty IRI="phi_base_property"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="curated_by"/>
         <ObjectProperty IRI="phi_base_property"/>
     </SubObjectPropertyOf>
@@ -715,6 +696,10 @@ Dr Noureddin Sadawi</Literal>
         <ObjectProperty IRI="phi_base_property"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="has_origin"/>
+        <ObjectProperty IRI="phi_base_property"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="has_output"/>
         <ObjectProperty IRI="is_part_of"/>
     </SubObjectPropertyOf>
@@ -735,12 +720,20 @@ Dr Noureddin Sadawi</Literal>
         <ObjectProperty IRI="phi_base_property"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="has_strain"/>
+        <ObjectProperty IRI="has_participant"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="hast_protein"/>
         <ObjectProperty IRI="has_participant"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="input_of"/>
         <ObjectProperty IRI="part_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="is_about"/>
+        <ObjectProperty IRI="phi_base_property"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="is_experiment_factor"/>
@@ -827,6 +820,10 @@ Dr Noureddin Sadawi</Literal>
         <Class IRI="protein"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
+        <DataProperty IRI="has_full_citation"/>
+        <DataProperty IRI="has_value"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="has_interaction_identifier"/>
         <DataProperty IRI="has_identifier"/>
     </SubDataPropertyOf>
@@ -834,53 +831,18 @@ Dr Noureddin Sadawi</Literal>
         <DataProperty IRI="has_strain_name"/>
         <DataProperty IRI="has_name"/>
     </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="http://oip.rothamsted.ac.uk/resources/has_citation"/>
-        <DataProperty IRI="has_value"/>
-    </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty IRI="has_strain_name"/>
         <Class IRI="organism"/>
     </DataPropertyDomain>
     <DataPropertyRange>
+        <DataProperty IRI="has_full_citation"/>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="has_name"/>
         <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
     </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>full_citation</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">full citation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>has_identifier</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has identifier</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>has_interaction_identifier</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has interaction identifier</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>has_citation</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has citation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>has_strain</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has strain</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>is_about</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is about</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>has_origin</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has origin</Literal>
-    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="definition"/>
         <IRI>annotation</IRI>
@@ -1067,6 +1029,11 @@ A disease is a disposition that describes states of disease associated with a pa
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">experiment</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>full_citation</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">full citation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty IRI="definition"/>
         <IRI>function</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Elemental activities, such as catalysis or binding, describing the actions of a gene product at the molecular level. A given gene product may exhibit one or more molecular functions.</Literal>
@@ -1118,6 +1085,11 @@ A disease is a disposition that describes states of disease associated with a pa
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>has_full_citation</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has full citation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>has_gene</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has gene</Literal>
     </AnnotationAssertion>
@@ -1143,6 +1115,11 @@ A disease is a disposition that describes states of disease associated with a pa
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>has_interaction_identifier</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has interaction identifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>has_location</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has location</Literal>
     </AnnotationAssertion>
@@ -1160,6 +1137,11 @@ A disease is a disposition that describes states of disease associated with a pa
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>has_name</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>has_origin</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has origin</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1185,6 +1167,11 @@ A disease is a disposition that describes states of disease associated with a pa
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>has_role</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>has_strain</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has strain</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1332,6 +1319,11 @@ interspecies interaction between organisms - Gene Ontology Extension</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>interaction</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">interaction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>is_about</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is about</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1566,7 +1558,7 @@ http://purl.org/ontology/bibo/Article</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>publication</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">citation</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">publication</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="definition"/>
@@ -1686,11 +1678,6 @@ http://purl.obolibrary.org/obo/GO_0016458</Literal>
         <IRI>title</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">title</Literal>
     </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://oip.rothamsted.ac.uk/resources/has_citation</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has citation</Literal>
-    </AnnotationAssertion>
     <AnnotationPropertyRange>
         <AnnotationProperty IRI="title"/>
         <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
@@ -1699,5 +1686,5 @@ http://purl.obolibrary.org/obo/GO_0016458</Literal>
 
 
 
-<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
 
